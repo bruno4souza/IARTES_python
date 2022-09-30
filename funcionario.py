@@ -28,13 +28,20 @@ class Funcionario(object):
         else: 
             self._nome = nome
             return True
-        
 
     def get_nome(self):
         return self._nome
 
+    # A Matricula tem obrigatoriamente 6 caracteres 
     def set_matricula(self, matricula:str):
-        self._matricula = matricula
+        if not isinstance(matricula, str) or matricula==' ':
+            return False
+        elif matricula.__len__() != 6:
+            return False
+        else: 
+            self._matricula = matricula
+            return True
+        
 
     def get_matricula(self):
         return self._matricula
