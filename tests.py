@@ -1,3 +1,4 @@
+from codecs import ascii_encode
 import funcionario as fn
 
 class TestFuncionario(object):
@@ -113,7 +114,29 @@ class TestFuncionario(object):
         func.set_id_computador("PC00007")
         assert func.get_id_computador() == "PC00007"
 
-    def testLogarRede (self):
+    def testLogarRede(self):
         func = fn.FuncionarioTI()
         func.logar_rede()
         assert  func.logar_rede() == "Autenticado na Rede"
+    
+    def testCrp(self):
+        func = fn.Psicologa()
+        assert func.set_crp("10646") == True
+        assert func.set_crp("106468") == False
+        assert func.set_crp("1064") == False
+        assert func.set_crp(10646) == False
+        assert func.set_crp(1231342) == False
+
+    def testPegarCrp(self):
+        func = fn.Psicologa()
+        func.set_crp("10646")
+        assert func.get_crp()=="10646"
+
+    def testSalaAtendimento(self):
+        func = fn.Psicologa()
+        assert func.set_sala_atendimento("Sala 2") == True
+        assert func.set_sala_atendimento(2) == False
+    def testPegarSalaAtendimento(self):
+        func = fn.Psicologa()
+        func.set_sala_atendimento("Sala 2")   
+        assert func.get_sala_atendimento() == "Sala 2" 

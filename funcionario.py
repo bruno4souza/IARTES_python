@@ -138,14 +138,25 @@ class Psicologa(FuncionarioRH):
         self._crp = crp
         self._sala_atendimento = sala_atendimento
 
-    def set_crp(self, crp):
-        self._crp = crp
+    def set_crp(self, crp:str):
+        if not isinstance(crp, str):
+            return False
+        elif crp.__len__() != 5:
+            return False
+        else: 
+            self._crp = crp
+            return True
+        
 
     def get_crp(self):
         return self._crp
 
     def set_sala_atendimento(self, sala_atendimento):
-        self._sala_atendimento = sala_atendimento
+        if not isinstance(sala_atendimento, str):
+            return False
+        else: 
+            self._sala_atendimento = sala_atendimento
+            return True
 
     def get_sala_atendimento(self):
         return self._sala_atendimento
@@ -222,3 +233,5 @@ class Suporte(FuncionarioTI):
 #print(fti.idade)
 
 #print(ftidev.linguagem)
+
+
