@@ -11,13 +11,24 @@ class Funcionario(object):
     
 
     def set_idade(self, idade:int):
-        self._idade = idade
+        
+            if not isinstance(idade, int):
+                return False
+            else: 
+                self._idade = idade
+                return True
+            
 
     def get_idade(self):
         return self._idade
 
     def set_nome(self, nome:str):
-        self._nome = nome
+        if not isinstance(nome, str) or nome==' ':
+                return False
+        else: 
+            self._nome = nome
+            return True
+        
 
     def get_nome(self):
         return self._nome
@@ -161,8 +172,8 @@ class Suporte(FuncionarioTI):
 
 f = Funcionario()
 f.set_idade(23)
-f.set_nome('Fulano')
-f.set_matricula ('n1230an')
+#f.set_nome('Fulano')
+#f.set_matricula ('n1230an')
 #f = Funcionario(23)
 #f.set_idade(23)
 print(f.get_idade())
