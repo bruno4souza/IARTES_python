@@ -168,16 +168,25 @@ class Recrutadora(FuncionarioRH):
         self._vagas_disponiveis = vagas_disponiveis
 
     def set_tipo_recrutamento(self, tipo_recrutamento):
-        self._tipo_recrutamento = tipo_recrutamento
+        if not isinstance(tipo_recrutamento, str) or tipo_recrutamento == " ":
+            return False
+        else: 
+            self._tipo_recrutamento = tipo_recrutamento
+            return True
+        
 
     def get_tipo_recrutamento(self):
         return self._tipo_recrutamento
 
     def set_vagas_disponiveis(self, vagas_disponiveis):
-        self._vagas_disponiveis = vagas_disponiveis
-
+        if not isinstance(vagas_disponiveis, list):
+            return False
+        else: 
+            self._vagas_disponiveis = vagas_disponiveis
+            return True
+        
     def get_vagas_disponiveis(self):
-        return self._vagas_disponiveiso
+        return self._vagas_disponiveis
 
 class Desenvolvedor(FuncionarioTI):
     def __init__(self, nome:str = None, matricula:str  = None, idade:int = 0, senha_rede:str  = None, id_computador:str  = None, linguagem:list  = None, senioridade:str  = None):
@@ -185,14 +194,23 @@ class Desenvolvedor(FuncionarioTI):
         self._linguagem = linguagem
         self._senioridade = senioridade
 
-    def set_linguagem(self, linguagem):
-        self._linguagem = linguagem
-
+    def set_linguagem(self, linguagem:list):
+        if not isinstance(linguagem, list):
+            return False
+        else: 
+            self._linguagem = linguagem
+            return True
+        
     def get_linguagem(self):
         return self._linguagem
 
-    def set_senioridade(self, senioridade):
-        self._senioridade = senioridade
+    def set_senioridade(self, senioridade:str):
+        if not isinstance(senioridade, str):
+            return False
+        else: 
+            self._senioridade = senioridade
+            return True
+        
 
     def get_senioridade(self):
         return self._senioridade
@@ -203,14 +221,23 @@ class Suporte(FuncionarioTI):
         self._setor = setor
         self._especialidade = especialidade
 
-    def set_setor(self, setor):
-        self._setor = setor
-
+    def set_setor(self, setor:str):
+        if not isinstance(setor, str):
+            return False
+        else: 
+            self._setor = setor
+            return True
+        
     def get_setor(self):
         return self._setor
 
-    def set_especialidade(self, especialidade):
-        self._especialidade = especialidade
+    def set_especialidade(self, especialidade:str):
+        if not isinstance(especialidade, str):
+            return False
+        else: 
+            self._especialidade = especialidade
+            return True
+        
 
     def get_especialidade(self):
         return self._especialidade
@@ -231,7 +258,6 @@ class Suporte(FuncionarioTI):
 #print(frh.idade)
 
 #print(fti.idade)
-
-#print(ftidev.linguagem)
+#print(type(["QA","Developer","Psicologo"]))
 
 
