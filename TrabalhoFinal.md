@@ -14,7 +14,7 @@ Teremos funcionário e esses funcinários são divididos entre funcionários de 
 
 Como é possível perceber, o esquema de funcionários da nossa empresa pode ser implementado utilizando o conceito de herança da orientação a objeto. Assim, a nossa classe pai será "Funcionário" as classes "Funcionário de RH" e "Funcionário de TI" serão classes filhas e por sua vez as classes Psicologa, Recrutadora, Desenvolvedor e Suporte serão classes netas como pode ser observado na imagem abaixo.
 
-![1.1](Imagens/hierarquiaFunc.png)
+![3.1](Imagens/hierarquiaFunc.png)
 
 ## 4. Polimorfismo
 
