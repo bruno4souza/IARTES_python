@@ -28,8 +28,8 @@ class Funcionario(object):
     def pegar_funcionario(self):
         return print("Funcionario Contratado")
 
-    def maiorIdade(self, idade):
-        if idade >= 18:
+    def maiorIdade(self):
+        if self.idade >= 18:
             return True
         else:
             return False
@@ -168,5 +168,3 @@ print(frh.idade)
 print(fti.idade)
 
 print(ftidev.linguagem)
-
-print(f.maiorIdade(14))
