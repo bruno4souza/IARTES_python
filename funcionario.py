@@ -2,10 +2,13 @@ from abc import ABC, abstractmethod
 from asyncio.windows_events import NULL
 
 class Funcionario(object):
-    def __init__(self, idade:int, nome:str, matricula:str):
+    
+    
+    def __init__(self, idade:int = 0, nome:str = None, matricula:str = None):
         self._idade = idade
         self._nome = nome
         self._matricula = matricula
+    
 
     def set_idade(self, idade:int):
         self._idade = idade
@@ -37,7 +40,7 @@ class Funcionario(object):
 
 
 class FuncionarioRH(Funcionario):
-    def __init__(self, nome:str, matricula:str, idade:int, meta_contratacao:int, qtd_contratacao:int):
+    def __init__(self, nome:str = None, matricula:str = None, idade:int = 0, meta_contratacao:int = 0, qtd_contratacao:int = 0 ):
         super().__init__(nome, matricula, idade)
         self._meta_contratacao = meta_contratacao
         self._qtd_contratacao = qtd_contratacao
@@ -63,7 +66,7 @@ class FuncionarioRH(Funcionario):
         pass
 
 class FuncionarioTI(Funcionario):
-    def __init__(self, nome:str, matricula:str, idade:int, senha_rede:str, id_computador:int):
+    def __init__(self, nome:str = None, matricula:str = None, idade:int = 0, senha_rede:str = None, id_computador:int = 0):
         super().__init__(nome, matricula, idade)
         self._senha_rede = senha_rede
         self._id_computador = id_computador
@@ -85,7 +88,7 @@ class FuncionarioTI(Funcionario):
        pass
 
 class Psicologa(FuncionarioRH):
-    def __init__(self, nome:str, matricula:str, idade:int, meta_contratacao:int, qtd_contratacao:int, crp:str, sala_atendimento:str):
+    def __init__(self, nome:str = None, matricula:str = None, idade:int = 0, meta_contratacao:int  = 0, qtd_contratacao:int  = 0 , crp:str = None, sala_atendimento:str = None):
         super().__init__(nome, matricula, idade, meta_contratacao, qtd_contratacao)
         self._crp = crp
         self._sala_atendimento = sala_atendimento
@@ -103,7 +106,7 @@ class Psicologa(FuncionarioRH):
         return self._sala_atendimento
 
 class Recrutadora(FuncionarioRH):
-    def __init__(self, nome:str, matricula:str, idade:int, meta_contratacao:int, qtd_contratacao:int, tipo_recrutamento:str, vagas_disponiveis:list):
+    def __init__(self, nome:str = None, matricula:str = None, idade:int = 0, meta_contratacao:int = 0 , qtd_contratacao:int= 0 , tipo_recrutamento:str = None, vagas_disponiveis:list = None):
         super().__init__(nome, matricula, idade, meta_contratacao, qtd_contratacao)
         self._tipo_recrutamento = tipo_recrutamento
         self._vagas_disponiveis = vagas_disponiveis
@@ -121,7 +124,7 @@ class Recrutadora(FuncionarioRH):
         return self._vagas_disponiveiso
 
 class Desenvolvedor(FuncionarioTI):
-    def __init__(self, nome:str, matricula:str, idade:int, senha_rede:str, id_computador:str, linguagem:list, senioridade:str):
+    def __init__(self, nome:str = None, matricula:str  = None, idade:int = 0, senha_rede:str  = None, id_computador:str  = None, linguagem:list  = None, senioridade:str  = None):
         super().__init__(nome, matricula, idade, senha_rede, id_computador)
         self._linguagem = linguagem
         self._senioridade = senioridade
@@ -139,7 +142,7 @@ class Desenvolvedor(FuncionarioTI):
         return self._senioridade
 
 class Suporte(FuncionarioTI):
-    def __init__(self, nome:str, matricula:str, idade:int, senha_rede:str, id_computador:str, setor:str, especialidade:str):
+    def __init__(self, nome:str  = None , matricula:str  = None, idade:int = 0, senha_rede:str  = None, id_computador:str  = None, setor:str  = None, especialidade:str  = None):
         super().__init__(nome, matricula, idade, senha_rede, id_computador)
         self._setor = setor
         self._especialidade = especialidade
@@ -157,12 +160,12 @@ class Suporte(FuncionarioTI):
         return self._especialidade
 
 f = Funcionario()
-f.set_idade = 23
-f.set_nome = 'Fulano'
-f.set_matricula = 'n1230an'
+f.set_idade(23)
+f.set_nome('Fulano')
+f.set_matricula ('n1230an')
 #f = Funcionario(23)
 #f.set_idade(23)
-print(f.get_idade)
+print(f.get_idade())
 
 #frh = FuncionarioRH(25,'nome', '121314', 100,13)
 
