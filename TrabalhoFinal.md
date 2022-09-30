@@ -28,7 +28,7 @@ Para implementar o polimorfismo utilzaremos o metodo "Pagar_funcionario" que ser
 
 ## 6. Relaório de cobertura de código
 
-Segue nossa primeira execução de cobertura de teste que alcançou 67%
+Nossa primeira execução de cobertura de teste que alcançou 67%. Nessa primeira execução, testamos o método de validar se o funcionário é meior de idade ou não e focamos nos set/get dos atributos que são da classe principal (Funcionário), também fizemos testes para os atributos da classe filha (FuncionárioRH.)
 
 ![6.1](Imagens/porcentagem1.png)
 
