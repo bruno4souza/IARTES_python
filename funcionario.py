@@ -35,12 +35,6 @@ class Funcionario(object):
         else:
             return False
 
-class Funcionario():
-    def __init__(self, idade:int):
-        self._idade = idade
-        self._nome = NULL
-        self._matricula = NULL
-
 
 class FuncionarioRH(Funcionario):
     def __init__(self, nome:str, matricula:str, idade:int, meta_contratacao:int, qtd_contratacao:int):
@@ -162,8 +156,11 @@ class Suporte(FuncionarioTI):
     def get_especialidade(self):
         return self._especialidade
 
-#f = Funcionario(23,'nome', '1826180265')
-f = Funcionario(23)
+f = Funcionario()
+f.set_idade = 23
+f.set_nome = 'Fulano'
+f.set_matricula = 'n1230an'
+#f = Funcionario(23)
 #f.set_idade(23)
 print(f.get_idade)
 
