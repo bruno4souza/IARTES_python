@@ -4,6 +4,9 @@ class TestFuncionario(object):
     def testMaiorIdade (self):
         func = fn.FuncionarioRH(25, 'nome', '121314', 100, 13)
         assert func.maiorIdade() == True
+        func.set_idade(16)
+        assert func.maiorIdade() == False
+
 
     def testValidarIdade(self):
         func = fn.Funcionario()
@@ -35,3 +38,22 @@ class TestFuncionario(object):
     def testPegarMatricula (self):
         func = fn.FuncionarioRH(25, 'nome', '121314', 100, 13)
         assert func.get_matricula() == '121314'
+
+    def testPegarFuncionario (self):
+        func = fn.Funcionario()
+        assert func.pegar_funcionario() == 'Funcionario Contratado'
+    
+    def testMetaContratacao(self):
+        func = fn.FuncionarioRH()
+        assert func.set_meta_contratacao(100) == True
+        assert func.set_meta_contratacao("25") == False
+    
+    def testPegaMetaContratacao(self):
+        func = fn.FuncionarioRH()
+        func.set_meta_contratacao(100)
+        assert func.get_meta_contratacao() == 100
+
+    def testQtdContratacao(self):
+        func = fn.FuncionarioRH()
+        assert func.set_qtd_contratacao(100) == True
+        assert func.set_qtd_contratacao("25") == False

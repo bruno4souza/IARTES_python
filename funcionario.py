@@ -12,12 +12,12 @@ class Funcionario(object):
 
     def set_idade(self, idade:int):
         
-            if not isinstance(idade, int):
-                return False
-            else: 
-                self._idade = idade
-                return True
-            
+        if not isinstance(idade, int):
+            return False
+        else: 
+            self._idade = idade
+            return True
+        
 
     def get_idade(self):
         return self._idade
@@ -63,14 +63,24 @@ class FuncionarioRH(Funcionario):
         self._meta_contratacao = meta_contratacao
         self._qtd_contratacao = qtd_contratacao
 
-    def set_meta_contratacao(self, meta_contratacao):
-        self._meta_contratacao = meta_contratacao
+    def set_meta_contratacao(self, meta_contratacao:int):
+        if not isinstance(meta_contratacao, int):
+            return False
+        else: 
+            self._meta_contratacao = meta_contratacao
+            return True
+        
 
     def get_meta_contratacao(self):
         return self._meta_contratacao
 
-    def set_qtd_contratacao(self, qtd_contratacao):
-        self._qtd_contratacao = qtd_contratacao
+    def set_qtd_contratacao(self, qtd_contratacao:int):
+        if not isinstance(qtd_contratacao, int):
+            return False
+        else: 
+            self._qtd_contratacao = qtd_contratacao
+            return True
+        
 
     def get_qtd_contratacao(self):
         return self._qtd_contratacao
