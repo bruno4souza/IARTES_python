@@ -91,9 +91,29 @@ class TestFuncionario(object):
     def testSenhaRede(self):
         func = fn.FuncionarioTI()
         assert func.set_senha_rede("P@ssw0rd123") == True
+        assert func.set_senha_rede("P@ssw") == False
+        assert func.set_senha_rede(1231342) == False
 
     #Teste que verifica uma inserção e consumo do atributo de senha de rede.
     def testPegarSenhaRede(self):
         func = fn.FuncionarioTI()
         func.set_senha_rede("P@ssw0rd123")
         assert func.get_senha_rede() == "P@ssw0rd123"
+
+    def testIdComputador(self):
+        func = fn.FuncionarioTI()
+        assert func.set_id_computador("PC00007") == True
+        assert func.set_id_computador("PC0007") == False
+        assert func.set_id_computador("PCdojunior") == False
+        assert func.set_id_computador(1231342) == False
+
+   
+    def testPegarIdComputador(self):
+        func = fn.FuncionarioTI()
+        func.set_id_computador("PC00007")
+        assert func.get_id_computador() == "PC00007"
+
+    def testLogarRede (self):
+        func = fn.FuncionarioTI()
+        func.logar_rede()
+        assert  func.logar_rede() == "Autenticado na Rede"

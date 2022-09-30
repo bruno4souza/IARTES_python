@@ -102,7 +102,7 @@ class FuncionarioTI(Funcionario):
 
     # A senha deve ter no minimo 6 caracteres
     def set_senha_rede(self, senha_rede:str):
-
+        
         if not isinstance(senha_rede, str):
             return False
         elif senha_rede.__len__() < 6:
@@ -111,19 +111,26 @@ class FuncionarioTI(Funcionario):
             self._senha_rede = senha_rede
             return True
         
-
     def get_senha_rede(self):
         return self._senha_rede
 
-    def set_senha_rede(self, id_computador):
-        self._id_computador = id_computador
+    #Id do computador sao de 7 digitos
+    def set_id_computador(self, id_computador:str):
+        if not isinstance(id_computador, str):
+            return False
+        elif id_computador.__len__()!=7:
+            return False
+        else: 
+            self._id_computador = id_computador
+            return True
+        
 
-    def get_senha_rede(self):
+    def get_id_computador(self):
         return self._id_computador
 
     @abstractmethod
     def logar_rede(self):
-       pass
+       return "Autenticado na Rede"
 
 class Psicologa(FuncionarioRH):
     def __init__(self, nome:str = None, matricula:str = None, idade:int = 0, meta_contratacao:int  = 0, qtd_contratacao:int  = 0 , crp:str = None, sala_atendimento:str = None):
@@ -197,13 +204,12 @@ class Suporte(FuncionarioTI):
     def get_especialidade(self):
         return self._especialidade
 
-f = Funcionario()
-f.set_idade(23)
+#f.set_idade(23)
 #f.set_nome('Fulano')
 #f.set_matricula ('n1230an')
 #f = Funcionario(23)
 #f.set_idade(23)
-print(f.get_idade())
+#print(f.get_idade())
 
 #frh = FuncionarioRH(25,'nome', '121314', 100,13)
 
