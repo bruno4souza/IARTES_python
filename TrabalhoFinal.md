@@ -24,7 +24,9 @@ Para implementar o polimorfismo utilzaremos o metodo "Pagar_funcionario" que ser
 
 ## 5. Encapsulamento
 
-(INCOMPLETO descrição do emcapsulamento)
+Para todos os atributos que são referentes a classe principal (Funcionário), utilizamos o conceito de encapsulamento de orientação a objeto. Por isso, esses atributos são todos privados e só podem ser acessados usando os métodos set/get. Na imagem abaixo segue um exemplo da implementação do conceito de encapsulamento.
+
+![5.1](Imagens/encapsulamento1.png)
 
 ## 6. Relaório de cobertura de código
 
