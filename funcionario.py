@@ -26,7 +26,7 @@ class Funcionario(object):
 
     @abstractmethod
     def pegar_funcionario(self):
-        return print("Funcionario Contratado")
+        return "Funcionario Contratado"
 
     def maiorIdade(self):
         if self.idade >= 18:
