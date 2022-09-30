@@ -95,13 +95,22 @@ class FuncionarioRH(Funcionario):
         return "Recrutador esta palestrando"
 
 class FuncionarioTI(Funcionario):
-    def __init__(self, nome:str = None, matricula:str = None, idade:int = 0, senha_rede:str = None, id_computador:int = 0):
+    def __init__(self, nome:str = None, matricula:str = None, idade:int = 0, id_computador:str = None, senha_rede:str = None):
         super().__init__(nome, matricula, idade)
         self._senha_rede = senha_rede
         self._id_computador = id_computador
 
-    def set_senha_rede(self, senha_rede):
-        self._senha_rede = senha_rede
+    # A senha deve ter no minimo 6 caracteres
+    def set_senha_rede(self, senha_rede:str):
+
+        if not isinstance(senha_rede, str):
+            return False
+        elif senha_rede.__len__() < 6:
+            return False
+        else: 
+            self._senha_rede = senha_rede
+            return True
+        
 
     def get_senha_rede(self):
         return self._senha_rede

@@ -74,3 +74,12 @@ class TestFuncionario(object):
         func = fn.FuncionarioRH()
         func.palestrar()
         assert  func.palestrar() == "Recrutador esta palestrando"
+
+    def testSenhaRede(self):
+        func = fn.FuncionarioTI()
+        assert func.set_senha_rede("P@ssw0rd123") == True
+
+    def testPegarSenhaRede(self):
+        func = fn.FuncionarioTI()
+        func.set_senha_rede("P@ssw0rd123")
+        assert func.get_senha_rede() == "P@ssw0rd123"
