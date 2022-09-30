@@ -87,11 +87,12 @@ class FuncionarioRH(Funcionario):
 
     @abstractmethod
     def recrutar_funcionario(self):
-        pass
+        self.set_qtd_contratacao(self.get_qtd_contratacao()+1)
+        return "Novo Funcionario Recrutado"
 
     @abstractmethod
     def palestrar(self):
-        pass
+        return "Recrutador esta palestrando"
 
 class FuncionarioTI(Funcionario):
     def __init__(self, nome:str = None, matricula:str = None, idade:int = 0, senha_rede:str = None, id_computador:int = 0):

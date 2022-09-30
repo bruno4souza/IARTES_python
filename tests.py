@@ -57,3 +57,20 @@ class TestFuncionario(object):
         func = fn.FuncionarioRH()
         assert func.set_qtd_contratacao(100) == True
         assert func.set_qtd_contratacao("25") == False
+    
+    def testPegaQtdContratacao(self):
+        func = fn.FuncionarioRH()
+        func.set_qtd_contratacao(45)
+        assert func.get_qtd_contratacao() == 45
+    
+    def testRecrutarFuncionario (self):
+        func = fn.FuncionarioRH()
+        func.set_qtd_contratacao(45)
+        assert func.recrutar_funcionario() == 'Novo Funcionario Recrutado'
+        assert func.get_qtd_contratacao() == 46
+    
+
+    def testpalestrar (self):
+        func = fn.FuncionarioRH()
+        func.palestrar()
+        assert  func.palestrar() == "Recrutador esta palestrando"
