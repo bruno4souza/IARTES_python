@@ -14,13 +14,21 @@ Teremos funcionário e esses funcinários são divididos entre funcionários de 
 
 Como é possível perceber, o esquema de funcionários da nossa empresa pode ser implementado utilizando o conceito de herança da orientação a objeto. Assim, a nossa classe pai será "Funcionário" as classes "Funcionário de RH" e "Funcionário de TI" serão classes filhas e por sua vez as classes Psicologa, Recrutadora, Desenvolvedor e Suporte serão classes netas como pode ser observado na imagem abaixo.
 
-Nosso programa vai contextualizar o registro de funcionários de uma Startup através de uma programação orientada a objetos, na qual vamos abstrair diversas funções e cargos, que são comuns em setores presentes no mercado de trabalho. Para isso a seguinte hierarquia será implementada. Teremos funcionário e esses funcionários são divididos entre funcionários de RH e funcionários de TI, os funcionários de RH podem ser psicólogos e recrutadores, já os funcionários de TI podem ser desenvolvedores e suporte.
-
 ![1.1](Imagens/hierarquiaFunc.png)
 
 ## 4. Polimorfismo
 
-Para implementar o polimorfismo utilzaremos o metodo "Pagar_fucioinario" que será um método da classe Funcinário mas que será implementado diferente por cada um dos funcionários do sistema.
+Para implementar o polimorfismo utilzaremos o metodo "Pagar_funcionario" que será um método da classe Funcinário mas que será implementado diferente por cada um dos funcionários do sistema.
+
+(Adicionar aqui a imagem do método pagar_funcionario)
+
+## 5. Encapsulamento
+
+(INCOMPLETO descrição do emcapsulamento)
+
+## 6. Relaório de cobertura de código
+
+(INCOMPLETO relatório de cobertura)
 
 Todo funcionário precisa ter um número de nome, idade e matrícula  
 
