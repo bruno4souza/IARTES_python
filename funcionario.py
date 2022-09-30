@@ -210,7 +210,6 @@ class Desenvolvedor(FuncionarioTI):
         else: 
             self._senioridade = senioridade
             return True
-        
 
     def get_senioridade(self):
         return self._senioridade

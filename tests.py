@@ -179,16 +179,16 @@ class TestFuncionario(object):
         func.set_linguagem(["Java","Python","JavaScript"])
         assert func.get_linguagem() == ["Java","Python","JavaScript"]
 
-    def testLinguagem(self):
+    def testSenioridade(self):
         func = fn.Desenvolvedor()
         assert func.set_senioridade("Pleno") == True
         assert func.set_senioridade(12) == False
 
-    def testPegaLinguagem(self):
+    def testPegaSenioridade(self):
         func = fn.Desenvolvedor()
         func.set_senioridade("Pleno")
         assert func.get_senioridade == "Pleno"
-"""
+
     def testSetor(self):
         func = fn.Suporte()
         assert func.set_setor("Redes") == True
@@ -209,4 +209,4 @@ class TestFuncionario(object):
         func = fn.Suporte()
         func.set_especialidade("Seguranca")
         assert func.get_especialidade == "Seguranca"
-    """
+    
