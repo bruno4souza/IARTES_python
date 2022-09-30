@@ -101,6 +101,7 @@ class TestFuncionario(object):
         func.set_senha_rede("P@ssw0rd123")
         assert func.get_senha_rede() == "P@ssw0rd123"
 
+    #Teste que verifica a inserção do atributo id computador.
     def testIdComputador(self):
         func = fn.FuncionarioTI()
         assert func.set_id_computador("PC00007") == True
@@ -108,17 +109,19 @@ class TestFuncionario(object):
         assert func.set_id_computador("PCdojunior") == False
         assert func.set_id_computador(1231342) == False
 
-   
+    #Teste que verifica coleta do atributo id computador. 
     def testPegarIdComputador(self):
         func = fn.FuncionarioTI()
         func.set_id_computador("PC00007")
         assert func.get_id_computador() == "PC00007"
 
+    #Teste que verifica o método que autentica o funcionário de Ti na rede. 
     def testLogarRede(self):
         func = fn.FuncionarioTI()
         func.logar_rede()
         assert  func.logar_rede() == "Autenticado na Rede"
     
+    #Teste que verifica a inserção do atributo crp.
     def testCrp(self):
         func = fn.Psicologa()
         assert func.set_crp("10646") == True
@@ -127,15 +130,19 @@ class TestFuncionario(object):
         assert func.set_crp(10646) == False
         assert func.set_crp(1231342) == False
 
+    #Teste que verifica a coleta do atributo crp.
     def testPegarCrp(self):
         func = fn.Psicologa()
         func.set_crp("10646")
         assert func.get_crp()=="10646"
 
+    #Teste que verifica a inserção do atributo sala de atendimento do funcionário psicologo. 
     def testSalaAtendimento(self):
         func = fn.Psicologa()
         assert func.set_sala_atendimento("Sala 2") == True
         assert func.set_sala_atendimento(2) == False
+    
+    #Teste que verifica a coleta do atributo sala de atendimento do funcionário psicologo.
     def testPegarSalaAtendimento(self):
         func = fn.Psicologa()
         func.set_sala_atendimento("Sala 2")   

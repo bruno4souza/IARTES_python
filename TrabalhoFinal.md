@@ -34,7 +34,12 @@ Nossa primeira execução de cobertura de teste que alcançou 67%. Nessa primeir
 
 ![6.1](Imagens/porcentagem1.png)
 
+A segunda execução conseguimos 87% porcento de cobertura. Testamos os atributos que faltaram dos profissionais de TI e da psicologa que é uma sub-classe de FuncionárioRH.
+
+![6.2](Imagens/oitentaporcento.png)
+
 Todo funcionário precisa ter um número de nome, idade e matrícula  
+
 
 Todo funcionário precisa ser pago
 
