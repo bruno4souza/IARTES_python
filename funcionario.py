@@ -237,26 +237,8 @@ class Suporte(FuncionarioTI):
             self._especialidade = especialidade
             return True
         
-
     def get_especialidade(self):
         return self._especialidade
 
-#f.set_idade(23)
-#f.set_nome('Fulano')
-#f.set_matricula ('n1230an')
-#f = Funcionario(23)
-#f.set_idade(23)
-#print(f.get_idade())
-
-#frh = FuncionarioRH(25,'nome', '121314', 100,13)
-
-#fti = FuncionarioTI(30, 'Bruno', '3454', 'senha_teste', 3453535)
-
-#ftidev = Desenvolvedor(30, 'Bruno', '3454', 'senha_teste', 3453535, ['Python','Java'], 'QA PL')
-
-#print(frh.idade)
-
-#print(fti.idade)
-#print(type(["QA","Developer","Psicologo"]))
 
 

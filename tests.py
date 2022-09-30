@@ -174,6 +174,7 @@ class TestFuncionario(object):
         assert func.set_linguagem(["Java","Python","JavaScript"]) == True
         assert func.set_linguagem("Java") == False
         assert func.set_linguagem(12) == False
+    
     def testPegaLinguagem(self):
         func = fn.Desenvolvedor()
         func.set_linguagem(["Java","Python","JavaScript"])
@@ -187,7 +188,7 @@ class TestFuncionario(object):
     def testPegaSenioridade(self):
         func = fn.Desenvolvedor()
         func.set_senioridade("Pleno")
-        assert func.get_senioridade == "Pleno"
+        assert func.get_senioridade() == "Pleno"
 
     def testSetor(self):
         func = fn.Suporte()
@@ -197,7 +198,7 @@ class TestFuncionario(object):
     def testPegaSetor(self):
         func = fn.Suporte()
         func.set_setor("Redes")
-        assert func.get_setor == "Redes"
+        assert func.get_setor() == "Redes"
 
     def testEspecialidade(self):
         func = fn.Suporte()
@@ -208,5 +209,5 @@ class TestFuncionario(object):
     def testPegaEspecialidade(self):
         func = fn.Suporte()
         func.set_especialidade("Seguranca")
-        assert func.get_especialidade == "Seguranca"
+        assert func.get_especialidade() == "Seguranca"
     
