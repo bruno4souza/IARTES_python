@@ -28,7 +28,9 @@ Para implementar o polimorfismo utilzaremos o metodo "Pagar_funcionario" que ser
 
 ## 6. Relaório de cobertura de código
 
-(INCOMPLETO relatório de cobertura)
+Segue nossa primeira execução de cobertura de teste que alcançou 67%
+
+![6.1](Imagens/porcentagem1.png)
 
 Todo funcionário precisa ter um número de nome, idade e matrícula  
 
