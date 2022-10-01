@@ -165,6 +165,7 @@ class Psicologa(FuncionarioRH):
         return self._sala_atendimento
 
     def pagamento_funcionario(self):
+        salario = 0
         salario_base = 2000
         if(self.get_sala_atendimento):
             salario = salario_base * 2
@@ -200,6 +201,7 @@ class Recrutadora(FuncionarioRH):
         return self._vagas_disponiveis
 
     def pagamento_funcionario(self):
+        salario = 0
         salario_base = 2000
         if(self.get_meta_contratacao == self.set_qtd_contratacao):
             salario = salario_base * 4
@@ -234,12 +236,13 @@ class Desenvolvedor(FuncionarioTI):
         return self._senioridade
     
     def pagamento_funcionario(self):
+        salario = 0
         salario_base = 3000
         if(self.get_senioridade == "JR"):
             salario = salario_base
-        elif(self.get_senioridade == "PL"):
+        if(self.get_senioridade == "PL"):
             salario = salario_base * 2
-        elif(self.get_senioridade == "SR"):
+        if(self.get_senioridade == 'SR'):
             salario = salario_base * 3
         return salario
 
@@ -270,8 +273,9 @@ class Suporte(FuncionarioTI):
         return self._especialidade
 
     def pagamento_funcionario(self):
+        salario = 0
         salario_base = 3000
-        if(self.get_setor == "segurança"):
+        if(self.get_setor == "seguranca"):
             salario = salario_base * 2
         else:
             salario = salario_base * 1.5
