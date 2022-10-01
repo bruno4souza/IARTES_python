@@ -148,64 +148,75 @@ class TestFuncionario(object):
         func.set_sala_atendimento("Sala 2")   
         assert func.get_sala_atendimento() == "Sala 2" 
 
+    #Teste que verifica a inserção do tipo de recrutamento. 
     def testTipoRecrutamento(self):
         func = fn.Recrutadora()
         assert func.set_tipo_recrutamento("Tech") == True
         assert func.set_tipo_recrutamento(" ") == False
         assert func.set_tipo_recrutamento(12) == False
     
+    #Teste que verifica a coleta do atributo tipo de recrutamento.
     def testPegaTipoRecrutamento(self):
         func = fn.Recrutadora()
         func.set_tipo_recrutamento("Tech")
         assert func.get_tipo_recrutamento()=="Tech"
 
+    #Teste que verifica a inserção dos tipos de vagas disponíveis.
     def testVagasDisponiveis(self):
         func = fn.Recrutadora()
         assert func.set_vagas_disponiveis(["QA","Developer","Psicologo"]) == True
         assert func.set_vagas_disponiveis("QA") == False
 
+    #Teste que verifica a coleta do atributo de vagas disponíveis.
     def testPegarVagasDisponiveis(self):
         func = fn.Recrutadora()
         func.set_vagas_disponiveis(["QA","Developer","Psicologo"])
         assert func.get_vagas_disponiveis() ==["QA","Developer","Psicologo"]
 
+    #Teste que verifica a inserção do tipo de linguagem.
     def testLinguagem(self):
         func = fn.Desenvolvedor()
         assert func.set_linguagem(["Java","Python","JavaScript"]) == True
         assert func.set_linguagem("Java") == False
         assert func.set_linguagem(12) == False
     
+    #Teste que verifica a coleta do tipo de linguagem.
     def testPegaLinguagem(self):
         func = fn.Desenvolvedor()
         func.set_linguagem(["Java","Python","JavaScript"])
         assert func.get_linguagem() == ["Java","Python","JavaScript"]
 
+    #Teste que verifica a inserção do atributo senioridade.
     def testSenioridade(self):
         func = fn.Desenvolvedor()
         assert func.set_senioridade("Pleno") == True
         assert func.set_senioridade(12) == False
 
+    #Teste que verifica a coleta de tipo de senioridade.
     def testPegaSenioridade(self):
         func = fn.Desenvolvedor()
         func.set_senioridade("Pleno")
         assert func.get_senioridade() == "Pleno"
 
+    #Teste que verifica a inserção do atributo setor.
     def testSetor(self):
         func = fn.Suporte()
         assert func.set_setor("Redes") == True
         assert func.set_setor(27951) == False
 
+    #Teste que verifica a coleta do atributo setor.
     def testPegaSetor(self):
         func = fn.Suporte()
         func.set_setor("Redes")
         assert func.get_setor() == "Redes"
 
+    #Teste que verifica a inserção do atributo especialidade.
     def testEspecialidade(self):
         func = fn.Suporte()
         assert func.set_especialidade("Seguranca") == True
         assert func.set_especialidade(27951) == False
 
-    
+    #Teste que verifica a coleta do atributo especialidade.
     def testPegaEspecialidade(self):
         func = fn.Suporte()
         func.set_especialidade("Seguranca")

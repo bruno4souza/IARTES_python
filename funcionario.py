@@ -56,6 +56,9 @@ class Funcionario(object):
         else:
             return False
 
+    @abstractmethod
+    def pagamento_funcionario(self):
+        pass
 
 class FuncionarioRH(Funcionario):
     def __init__(self, nome:str = None, matricula:str = None, idade:int = 0, meta_contratacao:int = 0, qtd_contratacao:int = 0 ):
@@ -161,6 +164,14 @@ class Psicologa(FuncionarioRH):
     def get_sala_atendimento(self):
         return self._sala_atendimento
 
+    def pagamento_funcionario(self):
+        salario_base = 2000
+        if(self.get_sala_atendimento):
+            salario = salario_base * 2
+        else:
+            salario = salario_base
+        return salario
+
 class Recrutadora(FuncionarioRH):
     def __init__(self, nome:str = None, matricula:str = None, idade:int = 0, meta_contratacao:int = 0 , qtd_contratacao:int= 0 , tipo_recrutamento:str = None, vagas_disponiveis:list = None):
         super().__init__(nome, matricula, idade, meta_contratacao, qtd_contratacao)
@@ -188,6 +199,14 @@ class Recrutadora(FuncionarioRH):
     def get_vagas_disponiveis(self):
         return self._vagas_disponiveis
 
+    def pagamento_funcionario(self):
+        salario_base = 2000
+        if(self.get_meta_contratacao == self.set_qtd_contratacao):
+            salario = salario_base * 4
+        else:
+            salario = salario_base * 1.5
+        return salario
+
 class Desenvolvedor(FuncionarioTI):
     def __init__(self, nome:str = None, matricula:str  = None, idade:int = 0, senha_rede:str  = None, id_computador:str  = None, linguagem:list  = None, senioridade:str  = None):
         super().__init__(nome, matricula, idade, senha_rede, id_computador)
@@ -213,6 +232,16 @@ class Desenvolvedor(FuncionarioTI):
 
     def get_senioridade(self):
         return self._senioridade
+    
+    def pagamento_funcionario(self):
+        salario_base = 3000
+        if(self.get_senioridade == "JR"):
+            salario = salario_base
+        elif(self.get_senioridade == "PL"):
+            salario = salario_base * 2
+        elif(self.get_senioridade == "SR"):
+            salario = salario_base * 3
+        return salario
 
 class Suporte(FuncionarioTI):
     def __init__(self, nome:str  = None , matricula:str  = None, idade:int = 0, senha_rede:str  = None, id_computador:str  = None, setor:str  = None, especialidade:str  = None):
@@ -240,5 +269,10 @@ class Suporte(FuncionarioTI):
     def get_especialidade(self):
         return self._especialidade
 
-
-
+    def pagamento_funcionario(self):
+        salario_base = 3000
+        if(self.get_setor == "segurança"):
+            salario = salario_base * 2
+        else:
+            salario = salario_base * 1.5
+        return salario

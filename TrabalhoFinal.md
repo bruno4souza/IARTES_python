@@ -18,7 +18,28 @@ Como é possível perceber, o esquema de funcionários da nossa empresa pode ser
 
 ## 4. Polimorfismo
 
-Para implementar o polimorfismo utilzaremos o metodo "Pagar_funcionario" que será um método da classe Funcinário mas que será implementado diferente por cada um dos funcionários do sistema.
+Para implementar o polimorfismo utilzaremos o método "Pagamento_funcionario" que será um método da classe Funcinário mas que será implementado diferente por cada um dos funcionários do sistema. Abaixo segue as imagem que mostram a implementação para cada um dos tipos de funcionários.
+
+4.1 Pisicólogo
+
+Para o pagamento do cardo de psicólogo a conta do pagamento é feita com base na palestra oferecida, caso o atributo seja True o salário é dobrado
+
+![4.1](Imagens/pagfuncpsi.png)
+
+4.2 Recrutadora
+Para o pagamento de recrutadora, o salário se basea na meta de contratação obtida, caso a meta seja atingida o salário é muntiplicado por 4 caso não seja é multiplicado por 1.5.
+
+![4.2](Imagens/pagfuncrecrut.png)
+
+4.3 Suporte
+Para o proficional de suporte a regra se basea no setor, caso ele seja do setor de segurança o salário é dobrado se não ele recebe mais uma multiplicação de 1.5
+
+![4.3](Imagens/pagfuncsuporte.png)
+
+4.4 Desenvolvedor
+Para os desenvolvedores o salário é baseado na senioridade, júnior recebe o salário base, pleno o dobro do salário base e o sénior recebe o triplo do salário base
+
+![4.4](Imagens/pagfuncdev.png)
 
 (Adicionar aqui a imagem do método pagar_funcionario)
 
@@ -38,32 +59,6 @@ A segunda execução conseguimos 87% porcento de cobertura. Testamos os atributo
 
 ![6.2](Imagens/oitentaporcento.png)
 
-Todo funcionário precisa ter um número de nome, idade e matrícula  
+Na terceira vez que rodamos atingimos os 100% de cobertura das tarefas implementadas. Foram verificados as linhas de código faltantes.
 
-
-Todo funcionário precisa ser pago
-
-Os funcionários de RH precisam  ter metas de 
-recrutamento e quantidade recrutada
-
-Todo funcionário de RH pode recrutar e palestrar
-
-Os funcionários de TI precisam ter senha da rede e um computador
-
-Todo funcionário de TI pode fazer login na rede
-
-Os funcionários do cargo Psicólogo (a) precisam ter meta de contratações, quantidade de contratações, CRP e sala de atendimento
-
-Todo psicólogo pode ...
-
-Os funcionários do cargo de Recrutador (a) precisam ter as vagas disponíveis
-
-Todo recrutador pode...
-
-Os funcionários do cargo de Desenvolvedor (a) precisam ter uma senioridade e conhecimento em linguagem de programação
-
-Todo Desenvolvedor ...
-
-Os funcionários do cargo de Suporte de TI precisam ter um setor e uma especialidade
-
-Todo funcionário de Suporte de TI.
+![6.3](Imagens/cemporcento.png)
