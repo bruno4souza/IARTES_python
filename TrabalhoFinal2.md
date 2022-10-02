@@ -7,6 +7,8 @@
 - João Paulo Marques
 - Mônica Lima
 
+Link do projeto no GitHub: https://github.com/bruno4souza/IARTES_python
+
 
 ## 1. Introdução
 
@@ -52,7 +54,7 @@ Polimorfismo: Esta classe não possui um exemplo de polimorfismo.
 
 Encapsulamento: Os atributos senha_rede e id_computador foram definidos como privado, sendo manipulados apenas pelos métodos get/set.
 
-## 2.4. Pisicologo
+## 2.4. Pisicologa
 - Atributos: atributos da classe pai(Funcionario), da filha(FuncionarioRH), crp, sala_atendimento e qtde_avaliacao.
 - Método: avaliar_candidato e pagamento_funcionario
 
