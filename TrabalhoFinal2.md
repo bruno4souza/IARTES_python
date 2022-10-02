@@ -42,7 +42,7 @@ Polimorfismo: Esta classe não possui um exemplo de polimorfismo.
 
 Encapsulamento: O atributo qtde_palestras foi definido como privado, sendo manipulado apenas pelos métodos get/set.
 
-## 2.2. FuncionarioTI
+## 2.3. FuncionarioTI
 - Atributos: atributos da classe pai, senha_rede e id_computador
 - Método: logar_rede
 
@@ -52,7 +52,7 @@ Polimorfismo: Esta classe não possui um exemplo de polimorfismo.
 
 Encapsulamento: Os atributos senha_rede e id_computador foram definidos como privado, sendo manipulados apenas pelos métodos get/set.
 
-## 2.3. Pisicólogo
+## 2.4. Pisicologo
 - Atributos: atributos da classe pai(Funcionario), da filha(FuncionarioRH), crp, sala_atendimento e qtde_avaliacao.
 - Método: avaliar_candidato e pagamento_funcionario
 
@@ -64,7 +64,7 @@ Encapsulamento: Os atributos senha_rede e id_computador foram definidos como pri
 
 ![4.1](Imagens/pagfuncpsi.png)
 
-## 2.4. Recrutadora
+## 2.5. Recrutadora
 - Atributos: atributos da classe pai(Funcionario), da filha(FuncionarioRH), meta_contratacao, qtd_contratacao, tipo_recrutamento e vagas_disponíveis.
 - Método: recrutar_funcionario, meta_alcancada e pagamento_funcionario
 
@@ -76,7 +76,7 @@ Encapsulamento: Os atributos foram definidos como privado, sendo manipulados ape
 
 ![4.2](Imagens/pagfuncrecrut.png)
 
-2.2.3. Suporte
+## 2.6. Suporte
 - Atributos: atributos da classe pai(Funcionario), da filha(FuncionarioTI), setor, especialidade e qtde_atendimento.
 - Método: registrar_atendimento e pagamento_funcionario
 
@@ -88,7 +88,7 @@ Encapsulamento: Os atributos foram definidos como privado, sendo manipulados ape
 
 ![4.3](Imagens/pagfuncsuporte.png)
 
-2.2.4. Desenvolvedor
+## 2.7. Desenvolvedor
 - Atributos: atributos da classe pai(Funcionario), da filha(FuncionarioTI), linguagem, senioridade e qtde_projetos.
 - Método: registrar_projetos e pagamento_funcionario
 
